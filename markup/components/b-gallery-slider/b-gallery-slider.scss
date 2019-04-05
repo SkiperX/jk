@@ -1,0 +1,30 @@
+.b-gallery-slider {
+  position: relative;
+  .non-swiper-slide {
+    display: none;
+  }
+}
+.b-gallery-slider__slide {
+  padding-bottom: 51.2%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.b-gallery-slider__thumb {
+  padding-bottom: 72%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.b-gallery-slider__nav {
+
+}
+.b-gallery-slider__nav-link {
+
+}
+@include media-breakpoint-down(md) {
+  .b-gallery-slider__slide {
+    padding-bottom: 66.6%;
+  }
+}

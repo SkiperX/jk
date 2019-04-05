@@ -1,0 +1,84 @@
+mixin b-location(data)
+    +b.b-location
+        +e.title
+            .container Локация
+        +e.map#location-map
+
+        script.
+
+            var ExtendedMarkers =
+                {
+                    markers: [
+                        {
+                            lat: 57.16208163659686,
+                            lng: 65.55126508805233,
+                            title: 'Marker Title',
+                            url: '#',
+                            active: true,
+                            style: 'flat',
+                            html: "<div data-marker='0' class='b-location__marker'><img src='static/img/general/people.svg' alt=''></div>"
+                        },
+                        {
+                            lat: 57.160499143287474,
+                            lng: 65.54497799012142,
+                            title: 'Marker Title',
+                            url: '#',
+                            active: true,
+                            style: 'flat',
+                            html: "<div data-marker='1' class='b-location__marker'><img src='static/img/general/school.svg' alt=''></div>"
+                        },
+                        {
+                            lat: 57.15549522622648,
+                            lng: 65.54429134461361,
+                            title: 'Marker Title',
+                            url: '#',
+                            active: true,
+                            style: 'flat',
+                            html: "<div data-marker='2' class='b-location__marker'><img src='static/img/general/school.svg' alt=''></div>"
+                        },
+                        {
+                            lat: 57.15486677948944,
+                            lng: 65.54536422821957,
+                            title: 'Marker Title',
+                            url: '#',
+                            active: true,
+                            style: 'flat',
+                            html: "<div data-marker='3' class='b-location__marker'><img src='static/img/general/flag.svg' alt=''></div>"
+                        },
+                        {
+                            lat: 57.15455384702667,
+                            lng: 65.54448098111175,
+                            title: 'Marker Title',
+                            url: '#',
+                            active: true,
+                            style: 'flat',
+                            html: "<div data-marker='4' class='b-location__marker'><img src='static/img/general/flag.svg' alt=''></div>"
+                        }
+                    ]
+                }
+        script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDlxtMO06u8V-z6oKyV9kjZevSs-vQ9Ato&callback')
+        script(src='https://cdn.jsdelivr.net/npm/rich-marker@0.0.1/index.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/js-marker-clusterer/1.0.0/markerclusterer_compiled.js')
+        +e.nav
+            .container
+                +e.row
+                    +e.col
+                        +e.A.link._active(href='#' data-map='0')
+                            +e.name Набережная реки Туры
+                            +e.desc 500 метров → 10 минут пешком
+                    +e.col
+                        +e.A.link(href='#' data-map='1')
+                            +e.name Международная школа CET
+                            +e.desc 800 метров → 10 минут пешком
+                    +e.col
+                        +e.A.link(href='#' data-map='2')
+                            +e.name Школа перспективных исследований ТГУ
+                            +e.desc 1300 метров → 10 минут на автомобиле
+                    +e.col
+                        +e.A.link(href='#' data-map='3')
+                            +e.name Правительство Тюменской области
+                            +e.desc 1200 метров → 15 минут ходьбы
+                    +e.col
+                        +e.A.link(href='#' data-map='4')
+                            +e.name Резиденция губернатора Тюменской области
+                            +e.desc 1100 метров → 13 минут ходьбы

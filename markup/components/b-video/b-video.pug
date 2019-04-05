@@ -1,0 +1,11 @@
+mixin b-video(data)
+    - var data = data || {}
+
+    - var videoSrc = data.videoSrc ? data.videoSrc : 'https://www.youtube.com/embed/rj73lCWeZQw?showinfo=0&autoplay=1&rel=0'
+    +b.b-video
+        +e.video
+            iframe(width='100%', height='493', data-src=videoSrc, frameborder='0', allow='autoplay;', allowfullscreen='')
+            +e.image(style=`background-image: url(${data.bg});`)
+                +e.video-ico
+                    +e.video-btn
+

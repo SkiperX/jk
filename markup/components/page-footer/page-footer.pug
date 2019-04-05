@@ -1,0 +1,37 @@
+
+
+mixin page-footer(data)
+    +b.page-footer
+        .container
+            .row
+                .col-md-12
+                    +e.menu
+                        +e.A.menu-link(href='#') О жилом комплексе
+                        +e.A.menu-link(href='#') Квартиры
+                        +e.A.menu-link(href='#') Локация
+                        +e.A.menu-link(href='#') Территория
+                        +e.A.menu-link(href='#') Галерея
+                        +e.A.menu-link(href='#') Новости
+                        +e.A.menu-link(href='#') Ход строительства
+                        +e.A.menu-link(href='#') Условия приобретения
+                        +e.A.menu-link(href='#') Офис продаж
+                .col-md-4.col-lg-6
+                    +e.address г. Тюмень, ул. Республики, 1, офис 15
+                    +e.A.tel(href='tel:+7 (3452)  299-299') +7 (3452)  299-299
+                .col-md-8.col-lg-6
+                    +e.btns
+                        +e.fz
+                            +e.fz-num 214 ФЗ
+                                !=  pugHelpers.Icon.call(locals, {iconName: 'ok'})
+                            +e.fz-text соответствуем
+
+                        +e.callme Оставить заявку
+                        +e.rialt Риэлторам
+                .col-md-4.col-lg-6
+                    +e.autor Разработка и продвижение сайта  —
+                        !=  pugHelpers.Icon.call(locals, {iconName: 'aero'})
+                .col-md-8.col-lg-6
+                    +e.bottom
+                        +e.link(href='#') Политика конфиденциальности
+                        +e.link(href='#') Проектная декларация
+                        +e.copyright © Ньютон, 2019

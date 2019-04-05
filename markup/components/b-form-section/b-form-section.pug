@@ -1,0 +1,27 @@
+mixin b-form-section(data)
+    +b.b-form-section
+        +e.border
+            +e.border-line
+        .container
+            +e.title Оставить заявку
+            +e.form
+                form
+                    .row
+                        .col-md-5
+                            label.form-group
+                                span.form-label  ФИО
+                                input.form-control(type='text' name='name')
+                        .col-md-5
+                            label.form-group
+                                span.form-label  Телефон
+                                input.form-control(type='tel')
+
+                        .col-md-2
+                            +e.BUTTON.btn отправить
+                    +e.snpd
+                        .form-group
+                            label.checkbox
+                                input(type='checkbox')
+                                span
+                                    | Отправляя информацию, вы соглашаетесь с
+                                    a(href='#', target='_blank') обработкой персональных данных

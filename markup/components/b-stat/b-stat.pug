@@ -1,0 +1,35 @@
+mixin b-stat(data)
+    +b.b-stat
+        +e.row
+            +e.left-col(style='background-image: url(%=static=%img/general/a2.jpg)')
+                +e.info._1
+                    +e.items
+                        +e.item
+                            +e.num 161
+                            +e.val квартира
+                        +e.item._large
+                            +e.num 31
+                                +e.SPAN.str →
+                                | 105
+                                +e.SPAN.m  м²
+                            +e.val площадь квартир
+                        +e.item
+                            +e.num 3,6
+                                +e.SPAN.m м
+                            +e.val высота потолков в хайфлэтах с террасами
+                        +e.item._offset-left._hidden-lg-down
+                            +e.num 23
+                            +e.val 23 ситихауса со вторым светом и отдельным входом
+                    +e.border._desctop
+                        +e.border-line
+            +e.right-col(style='background-image: url(%=static=%img/general/a3.jpg)')
+                +e.info._dark
+                    +e.items
+                        +e.item._mra
+                            +e.num 2
+                            +e.val клубных дома
+                        +e.item
+                            +e.num 9
+                            +e.val этажей
+        +e.border._mobile
+            +e.border-line

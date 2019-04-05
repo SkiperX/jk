@@ -1,0 +1,46 @@
+include ../b-video/b-video
+
+mixin b-gallery-slider(data)
+    +b.b-gallery-slider
+
+        .swiper-container.gallery-top
+            .swiper-wrapper
+                .swiper-slide
+                    +e.video-slide
+                        +b-video({
+                            bg: '%=static=%img/content/s1.jpg'
+                        })
+                .swiper-slide
+                    +e.slide(style='background-image:url(http://placehold.it/1440X737.jpg)')
+                .swiper-slide
+                    +e.slide(style='background-image:url(http://placehold.it/1440X737.jpg)')
+                .swiper-slide
+                    +e.slide(style='background-image:url(http://placehold.it/1440X737.jpg)')
+                .swiper-slide
+                    +e.slide(style='background-image:url(http://placehold.it/1440X737.jpg)')
+                .swiper-slide
+                    +e.slide(style='background-image:url(http://placehold.it/1440X737.jpg)')
+                .swiper-slide
+                    +e.slide(style='background-image:url(http://placehold.it/1440X737.jpg)')
+                .swiper-slide
+                    +e.slide(style='background-image:url(http://placehold.it/1440X737.jpg)')
+        .swiper-container.gallery-thumbs
+            .swiper-wrapper
+                .swiper-slide
+                    +e.thumb(style='background-image:url(%=static=%img/content/m1.jpg)')
+                .swiper-slide
+                    +e.thumb(style='background-image:url(%=static=%img/content/m2.jpg)')
+                .swiper-slide
+                    +e.thumb(style='background-image:url(%=static=%img/content/m3.jpg)')
+                .swiper-slide
+                    +e.thumb(style='background-image:url(%=static=%img/content/m4.jpg)')
+                .swiper-slide
+                    +e.thumb(style='background-image:url(%=static=%img/content/m5.jpg)')
+                .swiper-slide
+                    +e.thumb(style='background-image:url(http://placehold.it/205X147.jpg)')
+                .swiper-slide
+                    +e.thumb(style='background-image:url(http://placehold.it/205X147.jpg)')
+                .swiper-slide
+                    +e.thumb(style='background-image:url(http://placehold.it/205X147.jpg)')
+
+

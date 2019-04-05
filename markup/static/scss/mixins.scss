@@ -1,0 +1,161 @@
+// Mixins.
+
+ $baseFontSize : 16;
+@function rem($pixels, $context: $baseFontSize) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return $pixels / $context * 1rem;
+}
+@mixin btn {
+    display: inline-block;
+    line-height: 1;
+
+
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+
+
+
+    padding: rem(16) rem(32);
+    text-align: center;
+    transition: 0.2s background, 0.2s color, 0.2s border;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+
+    }
+}
+@mixin btn-white-transparent {
+  background: transparent;
+    border: 1px solid #fff;
+  color: #fff;
+    &:hover {
+        //background-color:  #f78f16;
+        //color: #fff;
+    }
+}
+@mixin btn-dark-transparent {
+    background: transparent;
+    color: #424b5a;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 2px solid #424b5a;
+    text-transform: uppercase;
+    &:hover {
+        //background-color:  #f78f16;
+        //color: #fff;
+    }
+}
+@mixin btn-yell-transparent {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: transparent;
+    border: 2px solid #d6b37e;
+    color: #fff;
+    text-transform: uppercase;
+    &:hover {
+        //background-color:  #f78f16;
+        //color: #fff;
+    }
+}
+@mixin btn-white {
+    background-color: #ffffff;
+    color: #1e1b16;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+}
+@mixin title {
+    color: #193348;
+    font-size: 65px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.02;
+    position: relative;
+    text-transform: uppercase;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 8px;
+        background-color: #d6b37e;
+    }
+    @include media-breakpoint-only(md) {
+        .container {
+            max-width: 987px;
+        }
+        font-size: 72px;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: calc(1rem + 6.9vw);
+    }
+
+}
+@mixin zoom {
+    @include media-breakpoint-up(lg) {
+        $galleryTransition: 0.3s;
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(#000000, 0.3);
+            z-index: 5;
+            opacity: 0;
+            transition: $galleryTransition;
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: url(../img/general/zoom.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: rem(46) rem(47);
+            z-index: 10;
+            display: none;
+            animation: top 0.3s forwards;
+
+        }
+        &:hover {
+            &:before,
+            &:after {
+                opacity: 1;
+                display: block;
+            }
+        }
+    }
+}
+@mixin link-h {
+    &:hover {
+        color: #7cb355;
+    }
+}
+@mixin cover {
+    background-size: cover;
+    background-position: center center;
+}

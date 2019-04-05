@@ -1,0 +1,224 @@
+@mixin swiper-bullet {
+  .swiper-pagination {
+    position: static;
+    display: flex;
+  }
+  .swiper-pagination-bullet {
+    width: rem(140);
+    height: auto;
+    background: transparent;
+    border-radius: 0px;
+    text-align: left;
+    opacity: 1;
+    &:not(:last-child) {
+      margin-right: rem(83);
+    }
+  }
+  .swiper-pagination-bullet {
+
+  }
+  .swiper-pagination-bullet-active {
+
+  }
+  .swiper-pagination__num {
+    display: block;
+    font-family: $exo2;
+    color: #d13f4e;
+    font-size: rem(18);
+    font-weight: 700;
+    letter-spacing: 0.36px;
+    margin-bottom: 10px;
+  }
+  .swiper-pagination__line {
+    width: 90%;
+    display: block;
+    background-color: #444444;
+    height: 2px;
+    margin-bottom: 10px;
+  }
+  .swiper-pagination__label {
+    display: block;
+    font-family: $exo2;
+    color: #444444;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+    line-height: 1;
+  }
+  .swiper-notification {
+
+  }
+
+}
+@mixin swiper-btn {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: rem(43);
+    height: rem(43);
+    border-radius: 50%;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    //position: static;
+    display: inline-flex;
+    //margin-top: 0;
+    stroke: #fff;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    @include media-breakpoint-down(sm) {
+      stroke: #7cb355 !important;
+      stroke-width: 4px;
+      stroke-linecap: round;
+    }
+  }
+  .swiper-button-prev {
+    svg {
+      transform: scale(-1, 1);
+    }
+  }
+  .swiper-button-disabled {
+    stroke: #fff;
+    stroke-width: 4px;
+    stroke-linecap: round;
+  }
+}
+@mixin swiper-btn-green {
+  .swiper-button-next,
+  .swiper-button-prev {
+    stroke: #7cb355;
+    stroke-width: 4px;
+    stroke-linecap: round;
+  }
+}
+@mixin swiper-fraction-pagination {
+  .swiper-pagination {
+    position: static;
+    width: auto;
+  }
+}
+@mixin swiper-static-arr {
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: static;
+    margin: 0;
+  }
+}
+@mixin tabs {
+  .nav-link {
+    font-family: $exo2;
+    color: #000000;
+    font-size: rem(28);
+    font-weight: 400;
+    letter-spacing: 0.56px;
+    line-height: 1.04;
+    border: none;
+    border-bottom: rem(3) solid transparent;
+    padding: 8px 0;
+    margin-right: rem(67);
+    &:hover {
+      border: none;
+      border-bottom: rem(3) solid  #d13f4e;
+    }
+  }
+  .nav-link.active {
+    background: transparent;
+    border: none;
+    color: #000000;
+    border-bottom: rem(3) solid  #d13f4e;
+    border-radius: 0px;
+  }
+  .nav-tabs {
+    border: none;
+    margin: 0;
+  }
+}
+.lg-backdrop {
+  background: rgba(black, 0.6) !important;
+}
+.fixed-header {
+  background: #1a6fc3;
+  //box-shadow: 0 0 10px 0 white;
+  padding: 8px 0;
+  .page-header__top {
+    display: none;
+  }
+  .page-header__menu-link {
+    //color: #7cb355;
+  }
+  .row {
+    align-items: center;
+  }
+  .page-header__logo-img {
+    max-height: 50px;
+  }
+}
+.datepickers-container {
+  z-index: 9999;
+}
+@mixin gallery-tab {
+  .nav-tabs {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 409px;
+    z-index: 15;
+    display: block;
+  }
+  .nav-tabs .nav-item {
+    border-radius: 0px;
+    display: block;
+    color: #5a5a5a;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: rem(25) rem(53);
+    text-transform: uppercase;
+    background-color: #f4f4f4;
+    line-height: 1.19;
+
+    &.active {
+      background-color: #dfdfdf;
+    }
+    &:hover {
+      background-color: #dfdfdf;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .nav-tabs {
+      max-width: 37.5vw;
+    }
+    .nav-tabs .nav-item {
+      font-size: calc(1rem + 1.8vw);
+      padding: 2vw 3.6vw;
+    }
+    //.nav-tabs .nav-item
+  }
+  @include media-breakpoint-down(sm) {
+    .nav-tabs {
+      bottom: auto;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    .nav-tabs .nav-item {
+      font-size: calc(1rem + 1.4vw);
+      //padding: 0;
+      flex: 1 1 25%;
+      text-align: center;
+      padding: 19px 3px 12px;
+      border-bottom: none !important;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    .nav-tabs {
+      flex-wrap: wrap;
+    }
+    .nav-tabs .nav-item {
+      flex: 1 1 50%;
+    }
+  }
+
+}

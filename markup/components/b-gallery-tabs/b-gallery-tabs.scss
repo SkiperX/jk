@@ -1,0 +1,22 @@
+
+.b-gallery-tabs {
+
+}
+.b-gallery-tabs__tabs {
+  position: relative;
+  @include gallery-tab;
+}
+.b-gallery-tabs__border {
+  height: rem(13);
+  background-color: #d6b37e;
+  position: relative;
+
+}
+.b-gallery-tabs__border-line {
+  background-color: #193348;
+  width: 194px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}

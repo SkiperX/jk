@@ -1,0 +1,22 @@
+mixin b-form(data)
+    +b.b-form._figur
+        +e.title Организовать спортивные сборы
+        form
+            +e.inputs
+                .row
+                    .col-md-6
+                        label.form-group
+                            .form-ico
+                                !=  pugHelpers.Icon.call(locals, {iconName: 'date'})
+                            span.form-label  Дата заезда
+                            input.form-control.datepicker-here(data-js-sync='start-date')
+                    .col-md-6
+                        label.form-group
+                            .form-ico
+                                !=  pugHelpers.Icon.call(locals, {iconName: 'date'})
+                            span.form-label  Дата выезда
+                            input.form-control.datepicker-here(data-js-sync='end-date')
+            +e.bottom
+                +e.A.button(href='#' data-toggle="modal" data-target="#groupModal") далее
+                +e.A.link(href='#' data-toggle="modal" data-target="#orderModal") Индивидуальным туристам
+

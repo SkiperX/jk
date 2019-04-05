@@ -1,0 +1,41 @@
+//-Главная
+extends ../layouts/default.pug
+
+include ../components/page-header/page-header
+include ../components/page-footer/page-footer
+include ../components/b-main/b-main
+include ../components/b-menu/b-menu
+include ../components/b-stat/b-stat
+include ../components/b-gallery-slider/b-gallery-slider
+include ../components/b-gallery-tabs/b-gallery-tabs
+include ../components/b-small-places/b-small-places
+include ../components/b-form-section/b-form-section
+include ../components/b-floor-choice/b-floor-choice
+include ../components/b-location/b-location
+block vars
+    - var title = 'Главная'
+
+
+block content
+    .page__menu
+        +b-menu
+    .page__header
+        +page-header
+    .page__b-main
+        +b-main
+    .page__b-stat
+        +b-stat
+    .page__b-gallery-tabs
+        +b-gallery-tabs
+    .page__b-location
+        +b-location
+    .page__b-small-places
+        +b-small-places
+    .page__b-floor-choice
+        +b-floor-choice
+    .page__b-form-section
+        +b-form-section
+
+    .page__footer#contacts
+        +page-footer
+

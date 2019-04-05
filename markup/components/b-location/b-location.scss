@@ -1,0 +1,120 @@
+.b-location {
+  min-height: 100vh;
+  padding: rem(81) 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  @include media-breakpoint-up(xx) {
+    .container {
+      max-width: 1410px;
+    }
+  }
+}
+.b-location__title {
+  @include title;
+  pointer-events: none;
+  position: relative;
+  z-index: 15;
+}
+.b-location__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.b-location__nav {
+  margin-top: auto;
+}
+.b-location__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.b-location__col {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+.b-location__link {
+  background-color: #ffffff;
+  padding: 20px 30px;
+  display: block;
+  height: 100%;
+  &_active {
+    background-color: #193348;
+    .b-location__name {
+      color: #d6b37e;
+    }
+    .b-location__desc {
+      color: #ffffff;
+    }
+  }
+}
+.b-location__name {
+  color: #2f3337;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.17;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  display: block;
+}
+.b-location__desc {
+  display: block;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.b-location__marker {
+  width: rem(27);
+  height: rem(27);
+  border-radius: 50%;
+  background-color: #d6b37e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: rem(13);
+
+  &_active {
+    background-color: #193348;
+  }
+}
+@include media-breakpoint-down(md) {
+  .b-location {
+    padding-bottom: 0;
+  }
+  .b-location__nav {
+    .container {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+  .b-location__name {
+    font-size: calc(1rem + 0.2vw);
+  }
+  .b-location__link {
+    padding: 2vw 1.4vw;
+  }
+}
+@include media-breakpoint-down(sm) {
+  .b-location__row {
+    flex-wrap: nowrap;
+  }
+  .b-location__col {
+    flex: 0 0 345px;
+    max-width: 80vw;
+  }
+  .b-location__nav .container {
+    overflow-x: auto;
+  }
+  .b-location__name {
+    font-size: calc(1rem + 1.4vw);
+  }
+  .b-location__link {
+    padding: 4.1vw 3.7vw 7vw;
+  }
+  .b-location__desc {
+    font-size: 16px;
+  }
+}

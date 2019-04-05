@@ -1,0 +1,22 @@
+include ../b-gallery-slider/b-gallery-slider
+mixin b-gallery-tabs(data)
+    +b.b-gallery-tabs
+        +e.tabs
+
+            nav
+                #nav-tab.nav.nav-tabs(role='tablist')
+                    a#nav-home-tab.nav-item.nav-link.active(data-toggle='tab', href='#tab1', role='tab', aria-controls='nav-home', aria-selected='true') экстерьер
+                    a#nav-profile-tab.nav-item.nav-link(data-toggle='tab', href='#tab2', role='tab', aria-controls='nav-profile', aria-selected='false') Территория
+                    a#nav-contact-tab.nav-item.nav-link(data-toggle='tab', href='#tab3', role='tab', aria-controls='nav-contact', aria-selected='false') Общественные пространства
+                    a#nav-contact-tab.nav-item.nav-link(data-toggle='tab', href='#tab4', role='tab', aria-controls='nav-contact', aria-selected='false') интерьер
+            #nav-tabContent.tab-content
+                #tab1.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-home-tab')
+                    +b-gallery-slider
+                #tab2.tab-pane.fade(role='tabpanel', aria-labelledby='nav-profile-tab')
+                    +b-gallery-slider
+                #tab3.tab-pane.fade(role='tabpanel', aria-labelledby='nav-contact-tab')
+                    +b-gallery-slider
+                #tab4.tab-pane.fade(role='tabpanel', aria-labelledby='nav-contact-tab')
+                    +b-gallery-slider
+        +e.border
+            +e.border-line

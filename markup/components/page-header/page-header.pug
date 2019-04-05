@@ -1,0 +1,20 @@
+
+
+mixin page-header(data)
+    +b.page-header
+        .container
+            .row
+                .col-auto.col-md-4.col-lg-6
+                    +e.A.logo(href='/')
+                        +e.PICTURE
+                            source(srcset="%=static=%img/general/logo.svg" media="(min-width: 769px)")
+                            +e.IMG.img(src='%=static=%img/general/logo-mobile.svg')
+                .col-auto.col-md-8.col-lg-6.page-header__col-right
+                    +e.right
+                        +e.A.tel(href='tel:+7 3452 299 399') +7 3452 299 399
+                        +e.A.callme(href='#') Оставить заявку
+                        +e.gamburger
+                            .gamburger
+                                span.gamburger-line1
+                                span.gamburger-line2
+                                span.gamburger-line3

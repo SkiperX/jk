@@ -1,0 +1,10 @@
+include ../user-content/user-content
+
+mixin b-modal_news(data)
+    // Modal
+    #news.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+        .modal-dialog.modal-xl(role='document')
+            .modal-content.modal-body
+                button.modal-close(type='button', data-dismiss='modal', aria-label='Close')
+                    !=  pugHelpers.Icon.call(locals, {iconName: 'close'})
+                +user-content

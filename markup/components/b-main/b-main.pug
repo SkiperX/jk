@@ -1,0 +1,22 @@
+mixin b-main(data)
+    +b.b-main
+        .swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    +e.slide(style='background-image: url(%=static=%img/general/n3.jpg)')
+                        .container
+                            +e.title Квартиры в тихом центре с видом на реку
+                            +e.IMG.img1(src='%=static=%img/general/n.png')
+                            +e.IMG.img2(src='%=static=%img/general/n2.png')
+                .swiper-slide
+                    +e.slide(style='background-image: url(%=static=%img/general/main2.jpg)')
+                        .container
+                            +e.title Квартиры в тихом центре с видом на реку
+                            +e.IMG.img1(src='%=static=%img/general/n.png')
+                            +e.IMG.img2(src='%=static=%img/general/n2.png')
+                .swiper-slide
+                    +e.slide(style='background-image: url(%=static=%img/general/main3.jpg)')
+                        .container
+                            +e.title Квартиры в тихом центре с видом на реку
+                            +e.IMG.img1(src='%=static=%img/general/n.png')
+                            +e.IMG.img2(src='%=static=%img/general/n2.png')

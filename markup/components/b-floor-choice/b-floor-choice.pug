@@ -1,0 +1,50 @@
+mixin b-floor-choice(data)
+    +b.b-floor-choice
+        +e.title
+            .container Выбрать <br> квартиру
+
+        +e.img-comt
+            +e.IMG.img(src='%=static=%img/general/chouse.jpg')
+            +e.SVG.svg(viewBox="0,0,1440,1131")
+                //6
+                //59
+                a(href='9')
+                    polygon.contour(data-floor='9' data-floor-x='8' data-floor-y='41' points='80,472 383,378 615,417 615,471 383,440 80,516')
+                a(href='8')
+                    polygon.contour(data-floor='8' data-floor-x='8' data-floor-y='46' points='80,523 383,448 615,479 615,524 383,501 80,560')
+                a(href='7')
+                    polygon.contour(data-floor='7' data-floor-x='8' data-floor-y='50' points='80,563 383,507 615,530 615,574 383,557 80,600')
+                a(href='6')
+                    polygon.contour(data-floor='6' data-floor-x='8' data-floor-y='54' points='80,603 383,564 615,582 615,624 383,613 80,640')
+                a(href='5')
+                    polygon.contour(data-floor='5' data-floor-x='8' data-floor-y='57' points='80,643 383,619.740539527913 615,630.3343949044586 615,673 383,668 80,680')
+                a(href='4')
+                    polygon.contour(data-floor='4' data-floor-x='8' data-floor-y='61' points='80,683 383,675.7366322325108 615,679.5201520098485 615,723 383,725 80,720')
+                a(href='3')
+                    polygon.contour(data-floor='3' data-floor-x='8' data-floor-y='65' points='80,723 383,730.2193170261735 615,727.1925012043034 615,775 383,780 80,760')
+                a(href='2')
+                    polygon.contour(data-floor='2' data-floor-x='8' data-floor-y='69' points='80,763 383,786.2154097307713 615,780 615,828 383,844.4816143017716 80,800')
+                a(href='1')
+                    polygon.contour(data-floor='1' data-floor-x='8' data-floor-y='73' points='80,807 383,851 615,834 615,900 383,933 80,871')
+                a(href='#')
+                    polygon.contour(data-floor='9' data-floor-x='52' data-floor-y='24' points='620,300 911,212 1369,367 1369,432 911,307 620,379')
+                a(href='#')
+                    polygon.contour(data-floor='8' data-floor-x='52' data-floor-y='33' points='620,393 911,322 1369,446 1369,497 911,400 620,455')
+                a(href='#')
+                    polygon.contour(data-floor='7' data-floor-x='52' data-floor-y='39' points='620,460 911,406 1369,503 1369,556 911,484 620,525')
+                a(href='#')
+                    polygon.contour(data-floor='6' data-floor-x='52' data-floor-y='46' points='620,529 911,490 1369,560 1369,615 911,568 620,595')
+                a(href='#')
+                    polygon.contour(data-floor='5' data-floor-x='52' data-floor-y='53' points='620,598 911,574 1369,617 1369,671 911,652 620,663')
+                a(href='#')
+                    polygon.contour(data-floor='4' data-floor-x='52' data-floor-y='59' points='620,667 911,658 1369,674 1369,728 911,737 620,732')
+                a(href='#')
+                    polygon.contour(data-floor='3' data-floor-x='52' data-floor-y='66' points='620,737 911,742 1369,732 1369,787 911,822 620,803')
+                a(href='#')
+                    polygon.contour(data-floor='2' data-floor-x='52' data-floor-y='74' points='620,808 911,829 1369,791 1369,847 911,911 620,876')
+                a(href='#')
+                    polygon.contour(data-floor='1' data-floor-x='52' data-floor-y='81' points='620,880 911,915 1369,851 1369,936 911,1042 620,980')
+        +e.label
+            +e.label-num 3
+            +e.label-text Этаж
+

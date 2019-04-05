@@ -1,0 +1,115 @@
+.b-floor-choice {
+  //padding: 50px 0;
+  position: relative;
+  //height: 100vh;
+  //min-height: 1020px;
+  overflow: hidden;
+  polygon {
+    cursor: pointer;
+    transition: 0.2s opacity;
+    //stroke: rgba(254, 112, 112, 0.8);
+    fill: rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.b-floor-choice__title {
+  @include title;
+  pointer-events: none;
+  z-index: 15;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+}
+.b-floor-choice__img-comt {
+  /*position: absolute;
+  //top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;*/
+  position: relative;
+}
+.b-floor-choice__img {
+  width: 100vw;
+  display: block;
+}
+
+.b-floor-choice__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.b-floor-choice__label {
+
+  width: rem(108);
+  height: rem(108);
+  background: #fff;
+  border-radius: 550%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  transform: translate(-50%, -100%);
+  pointer-events: none;
+
+  margin-top: -25px;
+  opacity: 0;
+  &_show {
+    opacity: 1;
+    transition: 0.4s opacity;
+  }
+}
+.b-floor-choice__label-num {
+  color: #193348;
+  font-size: rem(64);
+  font-weight: 300;
+  line-height: 0.9;
+  &:after {
+    content: '';
+    border: 14px solid transparent;
+    border-top: 26px solid #fff;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -5px;
+  }
+}
+.b-floor-choice__label-text {
+  color: #193348;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 0.9;
+}
+@include media-breakpoint-down(sm) {
+  .b-floor-choice__img-comt {
+    height: 100vh;
+    min-height: 500px;
+    overflow-x: auto;
+  }
+  .b-floor-choice__img {
+    height: 100%;
+    width: auto;
+    max-width: none;
+  }
+  .b-floor-choice__svg {
+    height: 100%;
+    width: auto;
+    max-width: none;
+  }
+
+}

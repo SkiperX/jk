@@ -1,0 +1,47 @@
+mixin b-menu(data)
+    +b.b-menu
+        .container
+            +e.row
+                +e.logo-col
+                    +e.A.logo
+                        !=  pugHelpers.Icon.call(locals, {iconName: 'logo'})
+                +e.menu-col
+                    +e.NAV.items
+                        +e.UL.list
+                            +e.LI.item
+                                +e.A.link(href='#') О жилом комплексе
+                            +e.LI.item
+                                +e.A.link(href='#') Квартиры
+                                +e.UL.dropdown
+                                    +e.LI.dropdown-item
+                                        +e.A.dropdown-link(href='#') Визуальный подбор
+                                    +e.LI.dropdown-item
+                                        +e.A.dropdown-link(href='#') По параметрам
+                                    +e.LI.dropdown-item
+                                        +e.A.dropdown-link(href='#') Информация
+
+                            +e.LI.item
+                                +e.A.link(href='#') Локация
+                            +e.LI.item
+                                +e.A.link(href='#') Территория
+                            +e.LI.item
+                                +e.A.link(href='#') Галерея
+                            +e.LI.item
+                                +e.A.link(href='#') Новости
+                            +e.LI.item
+                                +e.A.link(href='#') Ход строительства
+                            +e.LI.item
+                                +e.A.link(href='#') Условия приобретения
+                                +e.UL.dropdown
+                                    +e.LI.dropdown-item
+                                        +e.A.dropdown-link(href='#') Ипотека
+                                    +e.LI.dropdown-item
+                                        +e.A.dropdown-link(href='#') Акции
+                            +e.LI.item
+                                +e.A.link(href='#') Офис продаж
+
+                        +e.gamburger
+                            .gamburger
+                                span.gamburger-line1
+                                span.gamburger-line2
+                                span.gamburger-line3

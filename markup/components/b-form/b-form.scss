@@ -1,0 +1,64 @@
+
+
+
+
+.selectric {
+  border: none !important;
+  border-bottom: rem(2) solid  #e2e2e2 !important;
+  border-radius: 0;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.selectric .label {
+  line-height: 1;
+  height: auto;
+  padding: 10px 32px;
+  margin-left: 0;
+  padding-right: 0;
+  font-family: $openSans;
+  color: #656565;
+  font-size: 15px;
+  font-weight: 400;
+}
+.selectric .button {
+  background: transparent;
+}
+.selectric-items {
+  border-radius: 3px;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+}
+
+.selectric-items li:hover {
+  background-color: rgba( #7cb355, 0.1);
+}
+.selectric-items li.selected {
+  background-color:  #7cb355;
+  color: #fff;
+}
+
+
+@include media-breakpoint-down(sm) {
+  .b-form_figur {
+    max-width: 100%;
+  }
+  .b-form__link {
+    margin-right: 0;
+  }
+}
+@include media-breakpoint-down(xs) {
+  .b-form__bottom {
+    flex-direction: column;
+  }
+  .b-form_figur {
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .b-form__link {
+    margin-top: rem(24);
+    margin-left: 0;
+  }
+
+}

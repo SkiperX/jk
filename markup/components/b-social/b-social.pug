@@ -1,0 +1,9 @@
+mixin b-social(data)
+    +b.b-social
+        +e.A.link(href='#' target='_blank')
+            !=  pugHelpers.Icon.call(locals, {iconName: 'vk'})
+        +e.A.link(href='#' target='_blank')
+            !=  pugHelpers.Icon.call(locals, {iconName: 'viber'})
+        +e.A.link(href='#' target='_blank')
+            !=  pugHelpers.Icon.call(locals, {iconName: 'whatsapp'})
+

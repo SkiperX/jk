@@ -1,0 +1,84 @@
+.b-menu {
+  background-color: #2f3337;
+  padding: rem(100) 0 rem(48);
+}
+.b-menu__row {
+  display: flex;
+  margin: 0 -15px;
+}
+.b-menu__logo-col {
+  flex: 0 0 rem(124);
+  max-width: rem(124);
+  padding: 0px 15px;
+}
+.b-menu__logo {
+  display: block;
+  fill: #d6b37e;
+  &:hover {
+    fill: #F2E9D9;
+  }
+}
+.b-menu__menu-col {
+  flex-grow: 1;
+  padding: 0px 15px;
+}
+.b-menu__items {
+  text-transform: uppercase;
+  position: relative;
+}
+.b-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.b-menu__item {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: rem(62);
+  margin-bottom: rem(23);
+}
+.b-menu__link {
+  display: block;
+  font-family: $Lato;
+  color: #d6b37e;
+  font-size: 18px;
+  font-weight: 300;
+  &:hover {
+    color: #F2E9D9;
+  }
+}
+.b-menu__dropdown {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 12px;
+}
+.b-menu__dropdown-item {
+  margin: 0;
+  padding: 0;
+}
+.b-menu__dropdown-link {
+  color: #d6b37e;
+  font-size: 12px;
+  font-weight: 300;
+  display: block;
+  padding: 4px 0;
+  &:hover {
+    color: #F2E9D9;
+  }
+}
+.b-menu__gamburger {
+  position: absolute;
+  top: 24px;
+  right: 0;
+}
+@include media-breakpoint-down(md) {
+  .b-menu__logo-col {
+    display: none;
+  }
+  .b-menu {
+    padding: 34px 0 4px;
+  }
+}
